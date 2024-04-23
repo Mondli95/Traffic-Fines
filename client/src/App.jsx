@@ -1,5 +1,5 @@
 import About from "./components/about/About";
-import FinesList from "./components/finesList/FinesList";
+import FinesList from "./pages/finesList/FinesList";
 import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import Navbar from "./components/navbar/Navbar";
@@ -11,6 +11,8 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
+import Register from "./pages/register/Register";
+import AddOffence from "./pages/addOffence/AddOffence";
 
 function App() {
   const Layout = () => {
@@ -41,6 +43,14 @@ function App() {
         {
           path: "/fines",
           element: <FinesList />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/offence",
+          element: <AddOffence />,
         },
       ],
     },

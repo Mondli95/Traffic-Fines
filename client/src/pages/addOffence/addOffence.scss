@@ -1,0 +1,29 @@
+.offence {
+    padding: 20px;
+    display: flex;
+
+    .left {
+        flex: 1;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .inputs,
+        .labels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .offence-details {
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+        }
+    }
+
+    .right {
+        flex: 1;
+    }
+}
