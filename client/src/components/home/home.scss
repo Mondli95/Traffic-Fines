@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .items {
+    height: 100%;
+    width: 100%;
+    .background-img {
+      img {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
