@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .menu-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+
+        .icon {
+            flex: 1;
+
+            img {
+                width: 28px;
+                height: 28px;
+                border-radius: 5px;
+            }
+        }
+
+        .menu {
+            flex: 3;
+
+            .menu-name {}
+        }
+    }
+}

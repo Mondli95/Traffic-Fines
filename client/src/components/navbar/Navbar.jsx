@@ -5,6 +5,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 
 function Navbar() {
+  const loggedIn = true;
+
   return (
     <div className="navbar">
       <div className="logo-container">
@@ -28,7 +30,12 @@ function Navbar() {
         </div>
         <div className="items">
           <InputIcon className="icons" />
-          <div className="icon-name">Login</div>
+          <label>{loggedIn ? "Logout" : "Login"}</label>
+        </div>
+        <div className="items">
+          <div className="user-profile">
+            <img src="/avatar.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
