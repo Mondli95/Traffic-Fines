@@ -3,12 +3,11 @@ import { evidenceImages } from "../../lib/mockData";
 import { useState } from "react";
 
 function Evidence() {
-  //   const [imageIndex, setImageIndex] = useState(null);
-  const imageIndex = 0;
+  const [imageIndex, setImageIndex] = useState(null);
 
   return (
     <div className="evidence">
-      {/* {imageIndex !== null && (
+      {imageIndex !== null && (
         <div className="fullslider">
           <div className="left-arrow">
             <div className="arrow">
@@ -23,12 +22,18 @@ function Evidence() {
               <img src="/left-arrow.jpg" alt="" />
             </div>
           </div>
-          <div className="close">X</div>
+          <div className="close" onClick={() => setImageIndex(null)}>
+            X
+          </div>
         </div>
-      )} */}
+      )}
 
       <div className="bigImage">
-        <img src={evidenceImages[0].image} alt="" />
+        <img
+          src={evidenceImages[0].image}
+          alt=""
+          onClick={() => setImageIndex(0)}
+        />
       </div>
       <div className="smallImages">
         {evidenceImages.slice(1, 4).map((image, index) => (
@@ -36,7 +41,7 @@ function Evidence() {
             src={image.image}
             alt=""
             key={image.id}
-            // onClick={setImageIndex(index)}
+            onClick={() => setImageIndex(index + 1)}
           />
         ))}
       </div>
