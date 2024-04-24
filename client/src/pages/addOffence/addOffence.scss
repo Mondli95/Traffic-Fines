@@ -2,28 +2,54 @@
     padding: 20px;
     display: flex;
 
+    h3 {
+        margin-bottom: 20px;
+    }
+
     .left {
         flex: 1;
 
-        h3 {
-            margin-bottom: 20px;
-        }
-
-        .inputs,
-        .labels {
+        .offence-details {
             display: flex;
             flex-direction: column;
             gap: 20px;
-        }
 
-        .offence-details {
-            display: flex;
-            flex-direction: row;
-            gap: 80px;
+            .inputs {
+                display: flex;
+                flex-direction: row;
+
+                span {
+                    flex: 1;
+                }
+
+                input,
+                select,
+                textarea {
+                    flex: 2;
+                    border-radius: 4px;
+                    margin-right: 150px;
+                    font-size: 16px;
+                }
+
+                input,
+                select {
+                    padding: 3px;
+                    text-align: center;
+                }
+            }
         }
     }
 
     .right {
         flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .offence-attachments {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 }
